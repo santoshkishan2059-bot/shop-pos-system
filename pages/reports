@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Reports</title>
+  <link rel="stylesheet" href="css/reports.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>Business Reports</h1>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Today Sales</h3>
+      <p>Rs. <span id="todaySales">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Monthly Sales</h3>
+      <p>Rs. <span id="monthlySales">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Monthly Profit</h3>
+      <p>Rs. <span id="monthlyProfit">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Total Expenses</h3>
+      <p>Rs. <span id="totalExpenses">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Loan Remaining</h3>
+      <p>Rs. <span id="loanRemaining">0</span></p>
+    </div>
+
+  </div>
+
+  <div class="chart-section">
+    <canvas id="salesChart"></canvas>
+  </div>
+
+  <div class="chart-section">
+    <h3>Inventory Stock</h3>
+    <canvas id="inventoryChart"></canvas>
+    <ul id="lowStockList"></ul>
+  </div>
+
+  <button id="analyzeBtn">Analyze Profit</button>
+
+  <div class="advice">
+    <h3>Business Advice</h3>
+    <p id="adviceText"></p>
+  </div>
+
+  <script type="module" src="js/reports.js"></script>
+</body>
+</html>

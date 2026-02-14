@@ -1,0 +1,51 @@
+<section class="loans-layout" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; width:97vw; height:95vh; margin:0 auto; padding:20px; box-sizing:border-box;">
+
+  <!-- Add Loan Form (Left) -->
+  <div class="loan-form" style="background:#2a2356; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,0.25); overflow-y:auto;">
+    <h3 style="margin-bottom:15px;">Add / Update Loan</h3>
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Lender / Borrower Name</label>
+    <input type="text" id="loanName" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;">
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Phone / Contact</label>
+    <input type="text" id="loanContact" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;">
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Total Loan Amount (Rs.)</label>
+    <input type="number" id="loanAmount" min="0" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;">
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Monthly Payment (Rs.)</label>
+    <input type="number" id="monthlyPayment" min="0" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;">
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Due Date</label>
+    <input type="date" id="dueDate" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;">
+
+    <label style="display:block; margin-top:10px; font-size:13px;">Notes</label>
+    <textarea id="loanNotes" style="width:100%; padding:10px; border-radius:8px; border:none; margin-top:4px; background:#3b3270; color:#fff;"></textarea>
+
+    <button id="saveLoan" style="width:100%; margin-top:15px; padding:12px; border-radius:10px; border:none; background:linear-gradient(135deg,#1fa64a,#18a14a); color:#fff; cursor:pointer;">Save Loan</button>
+  </div>
+
+  <!-- Loan History (Right) -->
+  <div class="loan-history" style="background:#2a2356; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,0.25); overflow-y:auto;">
+    <h3 style="margin-bottom:15px;">Loan Records</h3>
+
+    <button id="printLoans" style="margin-bottom:10px; padding:8px 12px; border-radius:8px; border:none; background:linear-gradient(135deg,#1fa64a,#18a14a); color:#fff; cursor:pointer;">🖨 Print Table</button>
+
+    <table style="width:100%; border-collapse:collapse; font-size:13px; color:#ccc;">
+      <thead>
+        <tr style="background:#3b3270;">
+          <th style="padding:10px; text-align:left;">Date Added</th>
+          <th style="padding:10px; text-align:left;">Name</th>
+          <th style="padding:10px; text-align:left;">Contact</th>
+          <th style="padding:10px; text-align:left;">Loan Amount</th>
+          <th style="padding:10px; text-align:left;">Remaining</th>
+          <th style="padding:10px; text-align:left;">Monthly Payment</th>
+          <th style="padding:10px; text-align:left;">Due Date</th>
+          <th style="padding:10px; text-align:left;">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="loanBody"></tbody>
+    </table>
+  </div>
+
+</section>

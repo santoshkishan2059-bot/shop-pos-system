@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POS Sale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</head>
+<body style="font-family:sans-serif; margin:20px;">
+
+<section style="display:flex; flex-wrap:wrap; gap:20px;">
+
+  <!-- Scanner -->
+  <div style="flex:1 1 300px; border:1px solid #ccc; padding:15px;">
+    <h3>Scanner</h3>
+    <button id="startCamera">Open Camera</button>
+    <video id="qr-reader" style="width:100%; max-width:300px; display:none;"></video>
+  </div>
+
+  <!-- Manual Select -->
+  <div style="flex:1 1 300px; border:1px solid #ccc; padding:15px;">
+    <h3>Select Item</h3>
+    <select id="manualSelect" style="width:100%; padding:5px;">
+      <option value="">-- Select Item --</option>
+    </select>
+    <button id="addSelected" style="margin-top:10px;">Add to Cart</button>
+  </div>
+
+  <!-- Cart -->
+  <div style="flex:1 1 100%; border:1px solid #ccc; padding:15px;">
+    <h3>Cart</h3>
+
+    <table style="width:100%; border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #ccc;">Image</th>
+          <th style="border:1px solid #ccc;">Name</th>
+          <th style="border:1px solid #ccc;">Price</th>
+          <th style="border:1px solid #ccc;">Qty</th>
+          <th style="border:1px solid #ccc;">Total</th>
+          <th style="border:1px solid #ccc;">Barcode</th>
+          <th style="border:1px solid #ccc;">Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems">
+        <tr><td colspan="7" style="text-align:center;">Cart is empty</td></tr>
+      </tbody>
+    </table>
+
+    <p>Subtotal: Rs.<span id="subtotal">0</span></p>
+
+    <!-- Payment method selection (added for bank/wallet integration) -->
+    <label>Payment Method</label>
+    <select id="salePaymentMethod">
+      <option value="Cash">Cash</option>
+      <option value="eSewa">eSewa Wallet</option>
+    </select>
+
+    <p>
+      Discount: Rs.
+      <input type="number" id="discountInput" value="0" min="0" style="width:100px;">
+    </p>
+
+    <p>
+      Extra Charges: Rs.
+      <input type="number" id="extraChargesInput" value="0" min="0" style="width:100px;">
+    </p>
+
+    <p><b>Total: Rs.<span id="total">0</span></b></p>
+
+    <button id="completeSale">Complete Sale</button>
+    <button id="clearCart">Clear Cart</button>
+
+    <!-- Total Capital / Cash / Wallet display (added for bank tracking) -->
+    <div style="margin-top:15px; font-weight:bold;">
+      Total Cash: Rs.<span id="totalCash">0</span> | 
+      Total Wallet: Rs.<span id="totalWallet">0</span> | 
+      Total Capital: Rs.<span id="totalCapital">0</span>
+    </div>
+  </div>
+
+</section>
+
+<script type="module" src="../js/sale.js"></script>
+
+</body>
+</html>

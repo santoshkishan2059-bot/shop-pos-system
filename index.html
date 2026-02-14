@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Complete POS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:,">
+
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+  <!-- GLOBAL STYLES -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SHARED LAYOUT -->
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <!-- DYNAMIC PAGE CONTENT -->
+  <main id="app"></main>
+
+  <!-- LAYOUT + ROUTER -->
+  <script src="js/layout.js"></script>
+  <script src="js/router.js"></script>
+
+  <!-- FIREBASE CONFIG -->
+  <script type="module" src="firebase/firebase-config.js"></script>
+
+  <!-- UTILITIES -->
+  <script src="js/app.js"></script>
+  <script src="js/scanner.js"></script>
+
+</body>
+</html>

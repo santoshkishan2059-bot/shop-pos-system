@@ -1,0 +1,105 @@
+/* ===== Centered full page wrapper ===== */
+.expenses-wrapper {
+  width: 98vw;             /* Occupy 98% of viewport width */
+  max-width: 98vw;
+  height: 98vh;            /* Almost full viewport height */
+  margin: 0 auto;          /* Center horizontally */
+  display: grid;
+  grid-template-columns: 1fr; /* Inner grid for layout */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* ===== Expenses layout inside wrapper ===== */
+.expenses-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Form | History */
+  gap: 20px;
+  width: 100%;      /* Full width of wrapper */
+  height: 100%;     /* Full height of wrapper */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Form section (left) */
+.expense-form {
+  background: #2a2356;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* History section (right) */
+.expense-history {
+  background: #2a2356;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 100%;
+  overflow-y: auto; 
+  height: 100%;
+}
+
+/* Headings */
+.expense-form h3,
+.expense-history h3 {
+  margin: 0 0 15px;
+}
+
+/* Form inputs */
+.expense-form label {
+  font-size: 13px;
+  display: block;
+  margin-top: 10px;
+}
+
+.expense-form input,
+.expense-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 4px;
+  background: #3b3270;
+  color: #fff;
+}
+
+/* Save button */
+#saveExpense {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #1fa64a, #18a14a);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Expense list */
+.expense-history #expenseList {
+  font-size: 13px;
+}
+
+/* Summary */
+.expense-summary {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .expenses-layout {
+    grid-template-columns: 1fr; /* Stack vertically */
+    height: auto;
+  }
+
+  .expense-form,
+  .expense-history {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,161 @@
+/* ================================
+   SALE PAGE
+================================ */
+
+/* Layout inside <main> */
+.sale-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Sections */
+.sale-layout section,
+.sale-layout .scanner,
+.sale-layout .manual-select,
+.sale-layout .cart {
+  background: #2a2356;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Section Titles */
+.sale-layout h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ================================
+   SCANNER
+================================ */
+.scanner button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #2f6df6;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.scanner button:hover {
+  opacity: 0.9;
+}
+
+.scanner video {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* ================================
+   SELECT ITEM
+================================ */
+.manual-select select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #3b3270;
+  color: #fff;
+  font-size: 14px;
+}
+
+.manual-select button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #8a4af3;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================================
+   CART TABLE
+================================ */
+.cart table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.cart th {
+  text-align: left;
+  padding: 8px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.cart td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cart img {
+  border-radius: 6px;
+}
+
+/* ================================
+   TOTAL SECTION
+================================ */
+.cart p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.cart input {
+  width: 80px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background: #3b3270;
+  color: #fff;
+}
+
+.cart b {
+  font-size: 18px;
+  color: #7cffb2;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.cart button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#completeSale {
+  background: linear-gradient(135deg, #1db954, #18a14a);
+  color: #fff;
+}
+
+#clearCart {
+  background: linear-gradient(135deg, #e63946, #c1121f);
+  color: #fff;
+}
+
+.cart button:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .sale-layout {
+    grid-template-columns: 1fr;
+  }
+}

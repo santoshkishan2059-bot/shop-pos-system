@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory & Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/inventory-services.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="inventory-container">
+
+  <!-- Form to Add Product / Service -->
+  <div class="form-card">
+    <h2>Add Product / Service</h2>
+
+    <label>Type</label>
+    <select id="itemType">
+      <option value="product">Product</option>
+      <option value="service">Service</option>
+    </select>
+
+    <label>Name</label>
+    <input type="text" id="itemName" placeholder="Item name">
+
+    <label>Selling Price</label>
+    <input type="number" id="itemPrice" placeholder="0.00">
+
+    <label>Cost Price</label>
+    <input type="number" id="itemCost" placeholder="0.00">
+
+    <label>Stock (0 for service)</label>
+    <input type="number" id="itemStock" placeholder="0">
+
+    <label>Image</label>
+    <input type="file" id="itemImage" accept="image/*">
+
+    <button id="saveItem">Save Item</button>
+
+    <div class="barcode-box">
+      <canvas id="barcodeCanvas"></canvas>
+    </div>
+  </div>
+
+  <!-- Inventory List -->
+  <div class="list-card">
+    <h2>Inventory List</h2>
+
+    <div class="inventory-controls">
+      <input type="text" id="searchInput" placeholder="Search by name or type">
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="priceAsc">Price ↑</option>
+        <option value="priceDesc">Price ↓</option>
+        <option value="stockAsc">Stock ↑</option>
+        <option value="stockDesc">Stock ↓</option>
+      </select>
+    </div>
+
+    <div class="inventory-list" id="itemsList"></div>
+  </div>
+
+</div>
+
+<script type="module" src="js/inventory-services.js"></script>
+</body>
+</html>

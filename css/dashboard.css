@@ -1,0 +1,149 @@
+/* =====================================
+   DASHBOARD — FULL PAGE OVERRIDE
+===================================== */
+.dashboard {
+  grid-column: 1 / -1;        /* ⬅ FULL WIDTH inside <main> */
+  width: 100%;
+  padding: 20px;
+}
+
+/* =====================================
+   DASHBOARD GRID SYSTEM
+===================================== */
+.dashboard .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dashboard .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+.dashboard .card {
+  background: #2a2356;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.dashboard .card h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =====================================
+   STATS
+===================================== */
+.dashboard .stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.dashboard .stat strong {
+  font-size: 14px;
+}
+
+/* =====================================
+   SUMMARY BOXES
+===================================== */
+.dashboard .summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* =====================================
+   LIST ROWS
+===================================== */
+.dashboard .list-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.dashboard .list-row:last-child {
+  border-bottom: none;
+}
+
+/* =====================================
+   QUICK ACTION BUTTONS
+===================================== */
+.dashboard .action {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.dashboard .action:hover {
+  opacity: 0.9;
+}
+
+/* =====================================
+   COLOR UTILITIES
+===================================== */
+.dashboard .green  { background: #1fa64a; }
+.dashboard .blue   { background: #2f6df6; }
+.dashboard .purple { background: #8a4af3; }
+.dashboard .orange { background: #d08a2a; }
+.dashboard .red    { background: #c0392b; }
+.dashboard .brown  { background: #6d4c41; }
+
+/* =====================================
+   TEXT UTIL
+===================================== */
+.dashboard .muted {
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+/* =====================================
+   RESPONSIVE BEHAVIOR
+===================================== */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+  .dashboard .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 14px;
+  }
+
+  .dashboard .grid-2,
+  .dashboard .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard .card {
+    padding: 14px;
+  }
+}

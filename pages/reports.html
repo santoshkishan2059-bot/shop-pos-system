@@ -1,0 +1,36 @@
+<section class="reports-layout" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; width:97vw; height:95vh; margin:0 auto; padding:20px; box-sizing:border-box;">
+
+  <!-- Sales Summary (Left) -->
+  <div class="sales-summary" style="background:#2a2356; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,0.25); overflow-y:auto;">
+    <h3 style="margin-bottom:15px;">Daily Sales Report</h3>
+    <canvas id="dailySalesChart" style="width:100%; height:300px;"></canvas>
+    <div class="summary" style="margin-top:15px; font-size:14px;">
+      <p>Total Sales Today: Rs.<span id="totalSalesToday">0</span></p>
+      <p>Total Sales This Month: Rs.<span id="totalSalesMonth">0</span></p>
+      <p>Number of Orders Today: <span id="ordersToday">0</span></p>
+    </div>
+  </div>
+
+  <!-- Inventory & Alerts (Right) -->
+  <div class="inventory-alerts" style="background:#2a2356; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,0.25); overflow-y:auto;">
+    <h3 style="margin-bottom:15px;">Inventory Status & Alerts</h3>
+    <canvas id="lowStockChart" style="width:100%; height:300px;"></canvas>
+    <div class="alerts" style="margin-top:15px; font-size:14px;">
+      <ul id="lowStockList">
+        <!-- Low stock items will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Profit/Loss Overview (Full Width Below) -->
+  <div class="profit-loss-overview" style="grid-column:1 / span 2; background:#2a2356; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,0.25); overflow-y:auto; margin-top:20px;">
+    <h3 style="margin-bottom:15px;">Profit / Loss Analysis</h3>
+    <canvas id="profitLossChart" style="width:100%; height:300px;"></canvas>
+    <div class="summary" style="margin-top:15px; font-size:14px;">
+      <p>Total Revenue: Rs.<span id="totalRevenue">0</span></p>
+      <p>Total Cost: Rs.<span id="totalCost">0</span></p>
+      <p>Net Profit/Loss: Rs.<span id="netProfitLoss">0</span></p>
+    </div>
+  </div>
+
+</section>
